@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%; /* Ser till att containern täcker hela bredden av skärmen */
+  max-width: 100%; /* Förhindrar att bredden överskrider skärmstorleken */
+  margin-left: auto; /* Centrerar innehållet horisontellt */
+  margin-right: auto; /* Centrerar innehållet horisontellt */
+  padding-left: 16px; /* Lägger till lite padding till vänster */
+  padding-right: 16px; /* Lägger till lite padding till höger */
+}
+
+.landing-page {
+  background-image: url('/hosandrej.jpg');
+  background-size: cover; /* Gör så att bilden täcker hela bakgrunden */
+  background-position: center; /* Centrerar bilden på skärmen */
+  background-attachment: fixed; /* Gör så att bakgrunden inte rör sig när man scrollar */
+  width: 100%; /* Gör så att bakgrunden täcker hela bredden */
+  height: 100vh; /* Gör så att bakgrunden täcker hela höjden av skärmen */
+  display: flex; /* Gör så att innehållet kan centreras */
+  justify-content: center; /* Centrerar innehållet horisontellt */
+  align-items: center; /* Centrerar innehållet vertikalt */
+  color: white; /* Gör texten vit för att synas på bakgrunden */
+}
