@@ -29,15 +29,39 @@ body {
   padding-right: 16px; /* Lägger till lite padding till höger */
 }
 
-.landing-page {
-  background-image: url('/hosandrej.jpg');
-  background-size: cover; /* Gör så att bilden täcker hela bakgrunden */
-  background-position: center; /* Centrerar bilden på skärmen */
-  background-attachment: fixed; /* Gör så att bakgrunden inte rör sig när man scrollar */
-  width: 100%; /* Gör så att bakgrunden täcker hela bredden */
-  height: 100vh; /* Gör så att bakgrunden täcker hela höjden av skärmen */
-  display: flex; /* Gör så att innehållet kan centreras */
-  justify-content: center; /* Centrerar innehållet horisontellt */
-  align-items: center; /* Centrerar innehållet vertikalt */
-  color: white; /* Gör texten vit för att synas på bakgrunden */
+.fullscreen-section {
+  position: relative;
+  display: flex;
+  height: 100vh; /* h-screen equivalent */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #ffffff; /* bg-gray-950 equivalent */
+}
+
+.responsive-box {
+  display: flex;
+  height: 2.5rem; /* h-10 */
+  width: 2.5rem; /* w-10 */
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: bold; /* font-bold */
+  color: black; /* text-black */
+}
+
+@media (min-width: 640px) { /* sm */
+  .responsive-box {
+    height: 3.5rem; /* sm:h-14 */
+    width: 3.5rem; /* sm:w-14 */
+    font-size: 1.875rem; /* sm:text-3xl */
+  }
+}
+
+@media (min-width: 768px) { /* md */
+  .responsive-box {
+    height: 5rem; /* md:h-20 */
+    width: 5rem; /* md:w-20 */
+    font-size: 2.25rem; /* md:text-4xl */
+  }
 }
